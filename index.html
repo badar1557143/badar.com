@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Badar — UI/UX Designer and Front-End Developer portfolio." />
+  <title>Badar — Designer & Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="progress"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader-mark">B<span>.</span></div>
+    <div class="loader-line"><i></i></div>
+    <p>Loading experience <span id="loadPct">0</span>%</p>
+  </div>
+
+  <header class="nav">
+    <a class="logo magnetic" href="#top">BADAR<span>.</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#lab">Lab</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle magnetic" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="sun">☼</span><span class="moon">☾</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="eyebrow reveal"><span></span> UI/UX DESIGNER + FRONT-END DEVELOPER</div>
+      <h1 class="hero-title">
+        I turn <em>complex</em><br>
+        ideas into <span class="outline">clear</span><br>
+        digital experiences.
+      </h1>
+      <div class="hero-bottom reveal">
+        <p>Designing useful interfaces, memorable brands and fast, responsive web experiences.</p>
+        <a href="#work" class="circle-link magnetic">Explore<br>work <span>↘</span></a>
+      </div>
+      <div class="hero-scroll">SCROLL <span>↓</span></div>
+    </section>
+
+    <section class="marquee" aria-label="Capabilities">
+      <div class="marquee-track">
+        <span>UI/UX DESIGN</span><i>✦</i><span>PRODUCT DESIGN</span><i>✦</i><span>FRONT-END</span><i>✦</i><span>INTERACTION</span><i>✦</i>
+        <span>UI/UX DESIGN</span><i>✦</i><span>PRODUCT DESIGN</span><i>✦</i><span>FRONT-END</span><i>✦</i><span>INTERACTION</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section work" id="work">
+      <div class="section-head reveal">
+        <div>
+          <span class="kicker">01 / SELECTED WORK</span>
+          <h2>Projects with<br><em>purpose.</em></h2>
+        </div>
+        <p>Selected digital products and experiences where strategy, design and development meet.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card large reveal magnetic-card" data-project="savig">
+          <div class="project-image gradient-one">
+            <div class="browser">
+              <div class="browser-top"><b></b><b></b><b></b><small>SavigStyle</small></div>
+              <div class="mock-nav">SAVIGSTYLE <span>Shop&nbsp;&nbsp; Collections&nbsp;&nbsp; About</span></div>
+              <div class="mock-hero"><small>PREMIUM COTTON ESSENTIALS</small><strong>Made to be<br><i>worn.</i></strong><button>Explore collection →</button></div>
+              <div class="mock-products"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="project-meta"><div><span>E-COMMERCE · UI/UX</span><h3>SavigStyle</h3></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="project-card reveal magnetic-card" data-project="finance">
+          <div class="project-image gradient-two">
+            <div class="dashboard">
+              <small>OVERVIEW</small><strong>$48,920.84</strong>
+              <div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="dash-row"><b>Revenue</b><b>+24.8%</b></div>
+            </div>
+          </div>
+          <div class="project-meta"><div><span>PRODUCT · DASHBOARD</span><h3>Finora</h3></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="project-card reveal magnetic-card" data-project="mobile">
+          <div class="project-image gradient-three">
+            <div class="phone">
+              <div class="phone-notch"></div><small>GOOD MORNING</small><strong>Focus<br>better.</strong>
+              <div class="app-card">Deep work <b>52:18</b><i></i></div><div class="app-card">Today <b>06 tasks</b></div>
+            </div>
+          </div>
+          <div class="project-meta"><div><span>MOBILE · PRODUCT</span><h3>Focusly</h3></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="project-card wide reveal magnetic-card" data-project="studio">
+          <div class="project-image gradient-four">
+            <div class="studio-type">FORM<br><em>FOLLOWS</em><br>FEELING.</div>
+            <div class="studio-orbit"></div>
+          </div>
+          <div class="project-meta"><div><span>BRAND · CREATIVE WEB</span><h3>Forma Studio</h3></div><span class="arrow">↗</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section statement" id="about">
+      <span class="kicker reveal">02 / ABOUT</span>
+      <h2 class="reveal">Good design should feel<br><span class="highlight">obvious.</span> Great design<br>makes people <em>feel something.</em></h2>
+      <div class="statement-grid reveal">
+        <p>I’m Badar, a UI/UX designer and front-end developer focused on turning ambitious ideas into useful, beautiful digital products.</p>
+        <p>I work across strategy, interface design, prototyping and development — keeping the gap between a great concept and a great shipped experience small.</p>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="section-head reveal">
+        <div><span class="kicker">03 / PROCESS</span><h2>Think. Make.<br><em>Refine.</em></h2></div>
+      </div>
+      <div class="process-grid">
+        <div class="process-item reveal"><span>01</span><h3>Discover</h3><p>Understand the people, business goals, constraints and opportunity.</p></div>
+        <div class="process-item reveal"><span>02</span><h3>Define</h3><p>Turn messy requirements into a focused product direction and information architecture.</p></div>
+        <div class="process-item reveal"><span>03</span><h3>Design</h3><p>Build flows, wireframes and a visual system that makes the product intuitive.</p></div>
+        <div class="process-item reveal"><span>04</span><h3>Ship</h3><p>Prototype, test, develop and polish until every interaction earns its place.</p></div>
+      </div>
+    </section>
+
+    <section class="section skills">
+      <span class="kicker reveal">04 / TOOLKIT</span>
+      <div class="skill-cloud reveal">
+        <span>Figma</span><span>UI Design</span><span>UX Research</span><span>Design Systems</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Web</span><span>Prototyping</span><span>Motion</span>
+      </div>
+    </section>
+
+    <section class="section lab" id="lab">
+      <div class="section-head reveal">
+        <div><span class="kicker">05 / EXPERIMENTAL LAB</span><h2>Where I <em>play.</em></h2></div>
+        <p>Small experiments, interactions and visual studies. Because the best way to learn is to make.</p>
+      </div>
+      <div class="lab-grid">
+        <div class="lab-card tilt reveal"><span>01</span><strong>Magnetic UI</strong><small>Interaction study</small><div class="lab-shape"></div></div>
+        <div class="lab-card tilt reveal"><span>02</span><strong>Type Motion</strong><small>Typography study</small><div class="lab-type">MOVE</div></div>
+        <div class="lab-card tilt reveal"><span>03</span><strong>Orbit System</strong><small>CSS experiment</small><div class="lab-orbit"></div></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <span class="kicker reveal">06 / LET'S TALK</span>
+      <h2 class="reveal">Have an idea?<br><em>Let's make it real.</em></h2>
+      <a class="email-link magnetic reveal" href="mailto:hello@badar.design">hello@badar.design <span>↗</span></a>
+      <div class="contact-foot reveal"><span>Available for selected freelance projects</span><span>© 2026 Badar</span></div>
+    </section>
+  </main>
+
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="modal-inner">
+      <span class="kicker" id="modalKicker"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalIntro"></p>
+      <div class="modal-details" id="modalDetails"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

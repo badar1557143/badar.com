@@ -36,7 +36,33 @@ addEventListener('scroll',()=>{
   $('.progress').style.width=(scrollY/max*100)+'%';
 });
 
-$('#themeToggle').onclick=()=>document.body.classList.toggle('dark');
+const savedTheme=localStorage.getItem('badar-theme');
+if(savedTheme==='dark'||(!savedTheme&&matchMedia('(prefers-color-scheme: dark)').matches)){
+  document.body.classList.add('dark');
+}
+$('#themeToggle').onclick=()=>{
+  document.body.classList.toggle('dark');
+  localStorage.setItem('badar-theme',document.body.classList.contains('dark')?'dark':'light');
+};
+
+const menuToggle=$('#menuToggle'), mobileMenu=$('#mobileMenu');
+function openMenu(){
+  menuToggle.classList.add('active');
+  menuToggle.setAttribute('aria-expanded','true');
+  mobileMenu.classList.add('open');
+  mobileMenu.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeMenu(){
+  menuToggle.classList.remove('active');
+  menuToggle.setAttribute('aria-expanded','false');
+  mobileMenu.classList.remove('open');
+  mobileMenu.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+menuToggle.onclick=()=>menuToggle.classList.contains('active')?closeMenu():openMenu();
+$$('.mobile-menu a').forEach(a=>a.addEventListener('click',closeMenu));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&menuToggle.classList.contains('active'))closeMenu()});
 
 $$('.tilt').forEach(card=>{
   card.addEventListener('mousemove',e=>{
@@ -50,8 +76,10 @@ const projects={
   savig:{
     kicker:'E-COMMERCE · UI/UX · FRONT-END',
     title:'SavigStyle',
-    intro:'A premium cotton essentials storefront designed to make product discovery feel simple, confident and editorial.',
-    details:[['Role','UI/UX · Front-end'],['Focus','Conversion · Responsive UI'],['Stack','HTML · CSS · JavaScript']]
+    intro:'A premium cotton t-shirt storefront built for a Pakistan-based streetwear brand, pairing GOTS-certified fabric with a clean, editorial shopping experience and WhatsApp-based checkout.',
+    details:[['Role','UI/UX · Front-end'],['Focus','Conversion · Responsive UI'],['Stack','HTML · CSS · JavaScript'],['Catalog','New arrivals, bestsellers & size-guided product pages'],['Checkout','Cart → WhatsApp order confirmation flow'],['Live site','savigstyle.com']],
+    link:'http://savigstyle.com/',
+    image:'images/savigstyle-products.jpg'
   },
   finance:{
     kicker:'PRODUCT · DASHBOARD',
@@ -73,17 +101,46 @@ const projects={
   }
 };
 
-$$('.project-card').forEach(card=>card.onclick=()=>{
+const modalEl=$('#projectModal');
+let lastFocused=null;
+function getFocusable(container){return [...container.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])')]}
+function openProjectModal(card){
   const p=projects[card.dataset.project];
   $('#modalKicker').textContent=p.kicker;
   $('#modalTitle').textContent=p.title;
   $('#modalIntro').textContent=p.intro;
   $('#modalDetails').innerHTML=p.details.map(d=>`<div><b>${d[0]}</b><p>${d[1]}</p></div>`).join('');
-  $('#projectModal').classList.add('open');
-  $('#projectModal').setAttribute('aria-hidden','false');
+  const modalLink=$('#modalLink');
+  if(p.link){modalLink.href=p.link;modalLink.style.display='inline-flex'}else{modalLink.style.display='none'}
+  const modalImage=$('#modalImage');
+  if(p.image){modalImage.src=p.image;modalImage.alt=p.title+' preview';modalImage.style.display='block'}else{modalImage.style.display='none'}
+  lastFocused=document.activeElement;
+  modalEl.classList.add('open');
+  modalEl.setAttribute('aria-hidden','false');
   document.body.style.overflow='hidden';
+  setTimeout(()=>$('#modalClose').focus(),120);
+}
+$$('.project-card').forEach(card=>{
+  card.setAttribute('tabindex','0');
+  card.setAttribute('role','button');
+  card.setAttribute('aria-haspopup','dialog');
+  card.addEventListener('click',()=>openProjectModal(card));
+  card.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();openProjectModal(card)}
+  });
 });
-function closeModal(){ $('#projectModal').classList.remove('open');$('#projectModal').setAttribute('aria-hidden','true');document.body.style.overflow='' }
+function closeModal(){
+  modalEl.classList.remove('open');
+  modalEl.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  if(lastFocused)lastFocused.focus();
+}
 $('#modalClose').onclick=closeModal;
-$('#projectModal').addEventListener('click',e=>{if(e.target.id==='projectModal')closeModal()});
-addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+modalEl.addEventListener('click',e=>{if(e.target.id==='projectModal')closeModal()});
+addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&modalEl.classList.contains('open'))closeModal();
+  if(e.key==='Tab'&&modalEl.classList.contains('open')){
+    const focusables=getFocusable(modalEl);
+    if(focusables.length){e.preventDefault();focusables[0].focus()}
+  }
+});

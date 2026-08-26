@@ -31,9 +31,11 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:.12});
 $$('.reveal').forEach(el=>observer.observe(el));
 
+const scrollMouse=$('#scrollMouse');
 addEventListener('scroll',()=>{
   const max=document.documentElement.scrollHeight-innerHeight;
   $('.progress').style.width=(scrollY/max*100)+'%';
+  if(scrollY>80)scrollMouse.classList.add('hide');else scrollMouse.classList.remove('hide');
 });
 
 const savedTheme=localStorage.getItem('badar-theme');

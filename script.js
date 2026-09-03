@@ -13,7 +13,7 @@ let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
 addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
 (function cursorLoop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(cursorLoop)})();
 
-$$('a,.magnetic,.project-card,.theme-toggle').forEach(el=>{
+$$('a,.magnetic,.project-card').forEach(el=>{
   el.addEventListener('mouseenter',()=>{ring.style.width='54px';ring.style.height='54px'});
   el.addEventListener('mouseleave',()=>{ring.style.width='34px';ring.style.height='34px'});
 });
@@ -38,15 +38,6 @@ addEventListener('scroll',()=>{
   if(scrollY>80)scrollMouse.classList.add('hide');else scrollMouse.classList.remove('hide');
 });
 
-const savedTheme=localStorage.getItem('badar-theme');
-if(savedTheme==='dark'||(!savedTheme&&matchMedia('(prefers-color-scheme: dark)').matches)){
-  document.body.classList.add('dark');
-}
-$('#themeToggle').onclick=()=>{
-  document.body.classList.toggle('dark');
-  localStorage.setItem('badar-theme',document.body.classList.contains('dark')?'dark':'light');
-};
-
 const menuToggle=$('#menuToggle'), mobileMenu=$('#mobileMenu');
 function openMenu(){
   menuToggle.classList.add('active');
@@ -65,14 +56,6 @@ function closeMenu(){
 menuToggle.onclick=()=>menuToggle.classList.contains('active')?closeMenu():openMenu();
 $$('.mobile-menu a').forEach(a=>a.addEventListener('click',closeMenu));
 addEventListener('keydown',e=>{if(e.key==='Escape'&&menuToggle.classList.contains('active'))closeMenu()});
-
-$$('.tilt').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-    card.style.transform=`perspective(800px) rotateX(${y*-5}deg) rotateY(${x*5}deg)`;
-  });
-  card.addEventListener('mouseleave',()=>card.style.transform='');
-});
 
 const projects={
   savig:{

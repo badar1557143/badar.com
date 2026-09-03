@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Badar: UI/UX Designer and Front-End Developer portfolio." />
-  <title>Badar: Designer & Developer</title>
+  <meta name="description" content="Badar: graphic designer and front-end developer building bold brands and clean, fast interfaces." />
+  <title>Badar: Graphic Designer &amp; Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23f5f3ed' text-anchor='middle'%3EB.%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230A0A0A'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='32' font-weight='900' fill='%23AEEA3C' text-anchor='middle'%3EB.%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -32,15 +32,12 @@
   <header class="nav">
     <a class="logo magnetic" href="#top">BADAR<span>.</span></a>
     <nav>
-      <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#lab">Lab</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
-      <button class="theme-toggle magnetic" id="themeToggle" aria-label="Toggle dark mode">
-        <span class="sun">☼</span><span class="moon">☾</span>
-      </button>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span>
       </button>
@@ -49,47 +46,116 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav>
-      <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#lab">Lab</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-grid"></div>
-      <div class="eyebrow reveal"><span></span> UI/UX DESIGNER + FRONT-END DEVELOPER</div>
-      <h1 class="hero-title">
-        I turn <em>complex</em><br>
-        ideas into <span class="outline">clear</span><br>
-        digital experiences.
-      </h1>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <span class="doodle star s1" aria-hidden="true">✦</span>
+      <span class="doodle star s2" aria-hidden="true">✦</span>
+      <span class="doodle star s3" aria-hidden="true">✦</span>
+
+      <p class="eyebrow reveal">Badar: Graphic Designer + Front-End Developer</p>
+      <h1 class="hero-title reveal">I design brands and<br>interfaces people<br><span class="outline">remember.</span></h1>
+      <p class="hero-script reveal">every pixel tells a story</p>
+
       <div class="hero-bottom reveal">
-        <p>Designing useful interfaces, memorable brands and fast, responsive web experiences.</p>
-        <a href="#work" class="circle-link magnetic">Explore<br>work <span>↘</span></a>
+        <div class="tool-badges">
+          <span class="badge b-fig" title="Figma">Fg</span>
+          <span class="badge b-html" title="HTML">Ht</span>
+          <span class="badge b-css" title="CSS">Cs</span>
+          <span class="badge b-js" title="JavaScript">Js</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#work" class="btn-solid magnetic">View my work</a>
+          <a href="https://wa.me/923222920135?text=Hi%20Badar%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-outline magnetic">Chat on WhatsApp</a>
+        </div>
       </div>
-      <div class="hero-scroll">SCROLL <span>↓</span></div>
     </section>
 
     <section class="marquee" aria-label="Capabilities">
       <div class="marquee-track">
-        <span>UI/UX DESIGN</span><i>✦</i><span>PRODUCT DESIGN</span><i>✦</i><span>FRONT-END</span><i>✦</i><span>INTERACTION</span><i>✦</i>
-        <span>UI/UX DESIGN</span><i>✦</i><span>PRODUCT DESIGN</span><i>✦</i><span>FRONT-END</span><i>✦</i><span>INTERACTION</span><i>✦</i>
+        <span>UI/UX DESIGN</span><i>✦</i><span>BRAND IDENTITY</span><i>✦</i><span>FRONT-END DEV</span><i>✦</i><span>MOTION</span><i>✦</i>
+        <span>UI/UX DESIGN</span><i>✦</i><span>BRAND IDENTITY</span><i>✦</i><span>FRONT-END DEV</span><i>✦</i><span>MOTION</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-grid">
+        <div class="about-medallion reveal">
+          <div class="medallion-ring" aria-hidden="true"></div>
+          <div class="medallion-photo"><img src="images/badar-profile.jpg" alt="Badar" loading="lazy"></div>
+          <span class="doodle star s4" aria-hidden="true">✦</span>
+          <span class="doodle scribble" aria-hidden="true"></span>
+        </div>
+        <div class="about-copy reveal">
+          <span class="tag">About</span>
+          <h2>Hi, I'm Badar.</h2>
+          <p>I'm a graphic designer and front-end developer who turns ambitious ideas into brands and interfaces people actually remember. I care about the details most people scroll past.</p>
+          <p>My work sits at the intersection of strategy, visual identity and code, so what gets designed is exactly what ships.</p>
+          <div class="badge-row">
+            <span class="chip">Figma</span><span class="chip">Brand Identity</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Design Systems</span>
+          </div>
+          <div class="about-cta">
+            <a href="https://wa.me/923222920135?text=Hi%20Badar%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-solid magnetic">Hire me</a>
+            <a href="#work" class="btn-ghost magnetic">See my work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills">
+      <div class="section-head reveal"><h2><span class="script">Skills</span> &amp; tools.</h2></div>
+      <div class="skill-grid reveal">
+        <span class="skill-chip">Figma</span><span class="skill-chip">UI Design</span><span class="skill-chip">UX Research</span><span class="skill-chip">Design Systems</span><span class="skill-chip">Brand Identity</span><span class="skill-chip">HTML</span><span class="skill-chip">CSS</span><span class="skill-chip">JavaScript</span><span class="skill-chip">Responsive Web</span><span class="skill-chip">Prototyping</span><span class="skill-chip">Motion</span>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="section-head reveal"><h2>My <span class="script">journey.</span></h2></div>
+      <div class="journey-grid">
+        <div class="journey-col reveal">
+          <h3>Education</h3>
+          <div class="timeline">
+            <div class="t-item"><span class="t-year">2020</span><div><b>Lamansa School</b><p>Foundations in visual communication and design theory.</p></div></div>
+            <div class="t-item"><span class="t-year">2021</span><div><b>Barcelia School</b><p>Focused study in UI/UX and interaction design.</p></div></div>
+            <div class="t-item"><span class="t-year">2022</span><div><b>Lisorio University</b><p>Front-end development and design systems.</p></div></div>
+          </div>
+        </div>
+        <div class="journey-col reveal">
+          <h3>Experience</h3>
+          <div class="timeline">
+            <div class="t-item"><span class="t-year">2023</span><div><b>Freelance Designer</b><p>Brand identity and UI design for independent founders.</p></div></div>
+            <div class="t-item"><span class="t-year">2024</span><div><b>Front-End Developer</b><p>Built responsive, production-ready storefronts and product UIs.</p></div></div>
+            <div class="t-item"><span class="t-year">2025</span><div><b>Independent Studio</b><p>End-to-end design and development for direct clients.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="section-head reveal"><h2>How I <span class="script">work.</span></h2></div>
+      <div class="process-grid">
+        <div class="process-item reveal"><span>01</span><h3>Discover</h3><p>Understand the people, business goals, constraints and opportunity.</p></div>
+        <div class="process-item reveal"><span>02</span><h3>Define</h3><p>Turn messy requirements into a focused product direction and structure.</p></div>
+        <div class="process-item reveal"><span>03</span><h3>Design</h3><p>Build flows, wireframes and a visual system that feels intentional.</p></div>
+        <div class="process-item reveal"><span>04</span><h3>Ship</h3><p>Prototype, test, develop and polish until every detail earns its place.</p></div>
       </div>
     </section>
 
     <section class="section work" id="work">
       <div class="section-head reveal">
-        <div>
-          <span class="kicker">01 / SELECTED WORK</span>
-          <h2>Projects with<br><em>purpose.</em></h2>
-        </div>
-        <p>Selected digital products and experiences where strategy, design and development meet.</p>
+        <h2>Selected <span class="script">work.</span></h2>
+        <p>Products and brands where strategy, design and code come together.</p>
       </div>
 
       <div class="project-grid">
-        <article class="project-card large reveal magnetic-card" data-project="savig">
+        <article class="project-card large reveal" data-project="savig">
           <div class="project-image gradient-one">
             <div class="browser">
               <div class="browser-top"><b></b><b></b><b></b><small>savigstyle.com</small></div>
@@ -98,10 +164,10 @@
               </div>
             </div>
           </div>
-          <div class="project-meta"><div><span>E-COMMERCE · UI/UX</span><h3>SavigStyle</h3></div><span class="arrow">↗</span></div>
+          <div class="project-meta"><div><span>E-commerce / UI-UX</span><h3>SavigStyle</h3></div><span class="arrow">↗</span></div>
         </article>
 
-        <article class="project-card reveal magnetic-card" data-project="finance">
+        <article class="project-card reveal" data-project="finance">
           <div class="project-image gradient-two">
             <div class="dashboard">
               <small>OVERVIEW</small><strong>$48,920.84</strong>
@@ -109,74 +175,36 @@
               <div class="dash-row"><b>Revenue</b><b>+24.8%</b></div>
             </div>
           </div>
-          <div class="project-meta"><div><span>PRODUCT · DASHBOARD</span><h3>Finora</h3></div><span class="arrow">↗</span></div>
+          <div class="project-meta"><div><span>Product / Dashboard</span><h3>Finora</h3></div><span class="arrow">↗</span></div>
         </article>
 
-        <article class="project-card reveal magnetic-card" data-project="mobile">
+        <article class="project-card reveal" data-project="mobile">
           <div class="project-image gradient-three">
             <div class="phone">
               <div class="phone-notch"></div><small>GOOD MORNING</small><strong>Focus<br>better.</strong>
               <div class="app-card">Deep work <b>52:18</b><i></i></div><div class="app-card">Today <b>06 tasks</b></div>
             </div>
           </div>
-          <div class="project-meta"><div><span>MOBILE · PRODUCT</span><h3>Focusly</h3></div><span class="arrow">↗</span></div>
+          <div class="project-meta"><div><span>Mobile / Product</span><h3>Focusly</h3></div><span class="arrow">↗</span></div>
         </article>
 
-        <article class="project-card wide reveal magnetic-card" data-project="studio">
+        <article class="project-card wide reveal" data-project="studio">
           <div class="project-image gradient-four">
             <div class="studio-type">FORM<br><em>FOLLOWS</em><br>FEELING.</div>
             <div class="studio-orbit"></div>
           </div>
-          <div class="project-meta"><div><span>BRAND · CREATIVE WEB</span><h3>Forma Studio</h3></div><span class="arrow">↗</span></div>
+          <div class="project-meta"><div><span>Brand / Creative Web</span><h3>Forma Studio</h3></div><span class="arrow">↗</span></div>
         </article>
       </div>
     </section>
 
-    <section class="section statement" id="about">
-      <span class="kicker reveal">02 / ABOUT</span>
-      <h2 class="reveal">Good design should feel<br><span class="highlight">obvious.</span> Great design<br>makes people <em>feel something.</em></h2>
-      <div class="statement-grid reveal">
-        <p>I’m Badar, a UI/UX designer and front-end developer focused on turning ambitious ideas into useful, beautiful digital products.</p>
-        <p>I work across strategy, interface design, prototyping and development, keeping the gap between a great concept and a great shipped experience small.</p>
-      </div>
-    </section>
-
-    <section class="section process">
-      <div class="section-head reveal">
-        <div><span class="kicker">03 / PROCESS</span><h2>Think. Make.<br><em>Refine.</em></h2></div>
-      </div>
-      <div class="process-grid">
-        <div class="process-item reveal"><span>01</span><h3>Discover</h3><p>Understand the people, business goals, constraints and opportunity.</p></div>
-        <div class="process-item reveal"><span>02</span><h3>Define</h3><p>Turn messy requirements into a focused product direction and information architecture.</p></div>
-        <div class="process-item reveal"><span>03</span><h3>Design</h3><p>Build flows, wireframes and a visual system that makes the product intuitive.</p></div>
-        <div class="process-item reveal"><span>04</span><h3>Ship</h3><p>Prototype, test, develop and polish until every interaction earns its place.</p></div>
-      </div>
-    </section>
-
-    <section class="section skills">
-      <span class="kicker reveal">04 / TOOLKIT</span>
-      <div class="skill-cloud reveal">
-        <span>Figma</span><span>UI Design</span><span>UX Research</span><span>Design Systems</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Web</span><span>Prototyping</span><span>Motion</span>
-      </div>
-    </section>
-
-    <section class="section lab" id="lab">
-      <div class="section-head reveal">
-        <div><span class="kicker">05 / EXPERIMENTAL LAB</span><h2>Where I <em>play.</em></h2></div>
-        <p>Small experiments, interactions and visual studies. Because the best way to learn is to make.</p>
-      </div>
-      <div class="lab-grid">
-        <div class="lab-card tilt reveal"><span>01</span><strong>Magnetic UI</strong><small>Interaction study</small><div class="lab-shape"></div></div>
-        <div class="lab-card tilt reveal"><span>02</span><strong>Type Motion</strong><small>Typography study</small><div class="lab-type">MOVE</div></div>
-        <div class="lab-card tilt reveal"><span>03</span><strong>Orbit System</strong><small>CSS experiment</small><div class="lab-orbit"></div></div>
-      </div>
-    </section>
-
     <section class="section contact" id="contact">
-      <span class="kicker reveal">06 / LET'S TALK</span>
-      <h2 class="reveal">Have an idea?<br><em>Let's make it real.</em></h2>
+      <span class="doodle star s5" aria-hidden="true">✦</span>
+      <span class="doodle star s6" aria-hidden="true">✦</span>
+      <h2 class="reveal">Let's build<br>something <span class="script">bold.</span></h2>
+      <p class="reveal">Available for select freelance projects.</p>
       <a class="whatsapp-link magnetic reveal" href="https://wa.me/923222920135?text=Hi%20Badar%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span>↗</span></a>
-      <div class="contact-foot reveal"><span>Available for selected freelance projects</span><span>© 2026 Badar</span></div>
+      <div class="contact-foot reveal"><span>Based in Pakistan</span><span>© 2026 Badar</span></div>
     </section>
   </main>
 
